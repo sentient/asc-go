@@ -1,4 +1,4 @@
-module github.com/cidertool/asc-go
+module github.com/sentient/asc-go
 
 go 1.16
 
