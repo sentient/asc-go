@@ -1,7 +1,7 @@
 # asc-go
 
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/cidertool/asc-go/asc)](https://pkg.go.dev/github.com/cidertool/asc-go/asc)
-[![Test Status](https://github.com/cidertool/asc-go/workflows/Run%20Tests/badge.svg)](https://github.com/cidertool/asc-go/actions?query=workflow%253A%2522Run+Tests%2522)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/sentient/asc-go/asc)](https://pkg.go.dev/github.com/sentient/asc-go/asc)
+[![Test Status](https://github.com/sentient/asc-go/workflows/Run%20Tests/badge.svg)](https://github.com/sentient/asc-go/actions?query=workflow%253A%2522Run+Tests%2522)
 [![codecov](https://codecov.io/gh/cidertool/asc-go/branch/main/graph/badge.svg)](https://codecov.io/gh/cidertool/asc-go)
 
 asc-go is a Go client library for accessing Apple's [App Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi).
@@ -11,7 +11,7 @@ asc-go is a Go client library for accessing Apple's [App Store Connect API](http
 This project uses Go Modules. It requires **Go 1.16 or higher**.
 
 ```go
-import "github.com/cidertool/asc-go/asc"
+import "github.com/sentient/asc-go/asc"
 ```
 
 Construct a new App Store Connect client, then use the various services on the client to access different parts of the App Store Connect API. For example:
@@ -27,7 +27,7 @@ apps, _, err := client.Apps.ListApps(&asc.ListAppsQuery{
 
 The client is divided into logical chunks closely corresponding to the layout and structure of Apple's own documentation at <https://developer.apple.com/documentation/appstoreconnectapi>.
 
-For more sample code snippets, head over to the [examples](https://github.com/cidertool/asc-go/tree/main/examples) directory.
+For more sample code snippets, head over to the [examples](https://github.com/sentient/asc-go/tree/main/examples) directory.
 
 ### Authentication
 
@@ -38,7 +38,7 @@ import (
     "os"
     "time"
 
-    "github.com/cidertool/asc-go/asc"
+    "github.com/sentient/asc-go/asc"
 )
 
 func main() {
@@ -102,11 +102,11 @@ for {
 }
 ```
 
-For complete usage of asc-go, see the full [package docs](https://pkg.go.dev/github.com/cidertool/asc-go/asc).
+For complete usage of asc-go, see the full [package docs](https://pkg.go.dev/github.com/sentient/asc-go/asc).
 
 ## Contributing
 
-This project's primary goal is to cover the entire API surface exposed by the official App Store Connect API. Otherwise, it's being developed to aid in internal application development by the authors. Therefore, until the package's version stabilizes with v1, there isn't a strong roadmap beyond those stated goals. However, contributions are always welcome. If you want to get involved or you just want to offer feedback, please see [`CONTRIBUTING.md`](https://github.com/cidertool/.github/blob/main/CONTRIBUTING.md) for details.
+This project's primary goal is to cover the entire API surface exposed by the official App Store Connect API. Otherwise, it's being developed to aid in internal application development by the authors. Therefore, until the package's version stabilizes with v1, there isn't a strong roadmap beyond those stated goals. However, contributions are always welcome. If you want to get involved or you just want to offer feedback, please see [`CONTRIBUTING.md`](https://github.com/sentient/.github/blob/main/CONTRIBUTING.md) for details.
 
 ## License
 

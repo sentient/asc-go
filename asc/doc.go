@@ -21,11 +21,11 @@ along with asc-go.  If not, see <http://www.gnu.org/licenses/>.
 /*
 Package asc is a Go client library for accessing Apple's App Store Connect API.
 
-Usage
+# Usage
 
 Import the package as you normally would:
 
-	import "github.com/cidertool/asc-go/asc"
+	import "github.com/sentient/asc-go/asc"
 
 Construct a new App Store Connect client, then use the various services on the client to
 access different parts of the App Store Connect API. For example:
@@ -40,9 +40,9 @@ access different parts of the App Store Connect API. For example:
 The client is divided into logical chunks closely corresponding to the layout and structure
 of Apple's own documentation at https://developer.apple.com/documentation/appstoreconnectapi.
 
-For more sample code snippets, head over to the https://github.com/cidertool/asc-go/tree/main/examples directory.
+For more sample code snippets, head over to the https://github.com/sentient/asc-go/tree/main/examples directory.
 
-Authentication
+# Authentication
 
 You may find that the code snippet above will always fail due to a lack of authorization.
 The App Store Connect API has no methods that allow for unauthorized requests. To make it
@@ -54,7 +54,7 @@ to look a little more like this:
 		"os"
 		"time"
 
-		"github.com/cidertool/asc-go/asc"
+		"github.com/sentient/asc-go/asc"
 	)
 
 	func main() {
@@ -87,7 +87,7 @@ so you can't use this API to make queries against the entire App Store. For more
 creating the necessary credentials for the App Store Connect API, see the documentation at
 https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api.
 
-Rate Limiting
+# Rate Limiting
 
 Apple imposes a rate limit on all API clients. The returned Response.Rate value contains the rate
 limit information from the most recent API call. If the API produces a rate limit error, it will be
@@ -95,7 +95,7 @@ identifiable as an ErrorResponse with an error code of 429.
 
 Learn more about rate limiting at https://developer.apple.com/documentation/appstoreconnectapi/identifying_rate_limits.
 
-Pagination
+# Pagination
 
 All requests for resource collections (apps, builds, beta groups, etc.) support pagination.
 Responses for paginated resources will contain a Links property of type PagedDocumentLinks,
@@ -127,6 +127,5 @@ the response's Meta field of type PagingInformation.
 		}
 		opt.Cursor = cursor
 	}
-
 */
 package asc
