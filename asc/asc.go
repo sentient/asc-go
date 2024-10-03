@@ -105,6 +105,11 @@ func (c *Client) SetHTTPDebug(flag bool) {
 	c.httpDebug = flag
 }
 
+// SetBaseURL allows to change the defaultUrl "https://api.appstoreconnect.apple.com/v1/" to a different version.
+func (c *Client) SetBaseURL(utl url.URL) {
+	c.baseURL = url
+}
+
 // Response is a App Store Connect API response. This wraps the standard http.Response
 // returned from Apple and provides convenient access to things like rate limit.
 type Response struct {

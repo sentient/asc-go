@@ -37,6 +37,19 @@ const (
 	BetaInviteTypePublicLink BetaInviteType = "PUBLIC_LINK"
 )
 
+// BetaTesterState defined model for BetaTesterState.
+//
+// https://developer.apple.com/documentation/appstoreconnectapi/betatesterstate
+type BetaTesterState string
+
+const (
+	BetaTestStateNotInvited BetaTesterState = "NOT_INVITED"
+	BetaTestStateInvited    BetaTesterState = "INVITED"
+	BetaTestStateAccepted   BetaTesterState = "ACCEPTED"
+	BetaTestStateInstalled  BetaTesterState = "INSTALLED"
+	BetaTestStateRevoked    BetaTesterState = "REVOKED"
+)
+
 // BetaTester defines model for BetaTester.
 //
 // https://developer.apple.com/documentation/appstoreconnectapi/betatester
@@ -52,10 +65,11 @@ type BetaTester struct {
 //
 // https://developer.apple.com/documentation/appstoreconnectapi/betatester/attributes
 type BetaTesterAttributes struct {
-	Email      *Email          `json:"email,omitempty"`
-	FirstName  *string         `json:"firstName,omitempty"`
-	InviteType *BetaInviteType `json:"inviteType,omitempty"`
-	LastName   *string         `json:"lastName,omitempty"`
+	Email      *Email           `json:"email,omitempty"`
+	FirstName  *string          `json:"firstName,omitempty"`
+	InviteType *BetaInviteType  `json:"inviteType,omitempty"`
+	LastName   *string          `json:"lastName,omitempty"`
+	State      *BetaTesterState `json:"state,omitempty"`
 }
 
 // BetaTesterRelationships defines model for BetaTester.Relationships
